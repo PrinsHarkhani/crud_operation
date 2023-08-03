@@ -46,7 +46,8 @@ const AddData = () => {
         console.log("Something went wrong!");
       }
     } catch (error) {
-      console.log(error.response.data.message);
+      toast.error(error.response.data.message);
+      // console.log(error.response.data.message);
     }
   };
 
@@ -68,7 +69,7 @@ const AddData = () => {
                   type="text"
                   id="user_id"
                   name="user_id"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={userId}
                   onChange={(e) => setUserId(e.target.value)}
                 />
@@ -81,7 +82,7 @@ const AddData = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -96,7 +97,7 @@ const AddData = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -109,7 +110,7 @@ const AddData = () => {
                   type="text"
                   id="city"
                   name="city"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
                 />
@@ -124,7 +125,7 @@ const AddData = () => {
                   type="date"
                   id="dob"
                   name="dob"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={dob}
                   onChange={(e) => setDOB(e.target.value)}
                 />
@@ -137,7 +138,7 @@ const AddData = () => {
                   type="text"
                   id="address"
                   name="address"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                 />
@@ -152,7 +153,7 @@ const AddData = () => {
                   type="number"
                   id="mno"
                   name="mno"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={mno}
                   onChange={(e) => setMNO(e.target.value)}
                 />
@@ -165,7 +166,7 @@ const AddData = () => {
                   type="number"
                   id="postcode"
                   name="postcode"
-                  className="w-full py-1 px-4 border border-gray-300 rounded-md"
+                  className="w-full py-1 px-4 border border-gray-300 rounded-md focus:outline-none"
                   value={postcode}
                   onChange={(e) => setPostcode(e.target.value)}
                 />
@@ -174,12 +175,12 @@ const AddData = () => {
           </div>
           <div className="flex space-x-2 justify-end py-4">
             <Link to="/">
-              <button className=" text-gray-500 border  border-gray-500 font-semibold px-4 py-2 rounded-md">
+              <button className=" text-gray-500 border  border-gray-500 font-semibold px-4 py-2 rounded-md focus:outline-none">
                 Close
               </button>
             </Link>
             <button
-              className="bg-primary text-white px-3 py-1 rounded-md"
+              className="bg-primary text-white px-3 py-1 rounded-md focus:outline-none"
               onClick={dataSubmitHandler}
             >
               Save

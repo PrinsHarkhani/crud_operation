@@ -106,7 +106,7 @@ const ShowData = () => {
           id="search"
           name="search"
           placeholder="Search"
-          className=" border-gray-200 border-2 p-1 pl-8 rounded-md w-1/6"
+          className=" border-gray-200 border-2 p-1 pl-8 rounded-md w-1/6 focus:outline-none"
           onChange={(e) => setSearchKey(e.target.value)}
         />
         <Link to="/add">
@@ -215,8 +215,8 @@ const ShowData = () => {
                         >
                           <RiDeleteBinLine color="white" size={12} />
                         </button>
-                        <Link to={`edit/${item._id}`}>
-                          <button className="bg-primary rounded-md p-1">
+                        <Link to={`edit/${item._id}`} className="-my-1">
+                          <button className="bg-primary rounded-md p-1 my-1">
                             <BiEdit color="white" size={12} />
                           </button>
                         </Link>
